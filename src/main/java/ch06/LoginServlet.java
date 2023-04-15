@@ -1,6 +1,8 @@
 package ch06;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,12 @@ public class LoginServlet extends HttpServlet {
 		String userPwd = request.getParameter("userpwd");
 		System.out.println("usreId :" + userId);
 		System.out.println("userPwd :" + userPwd);
-		doGet(request, response);
+
+		//응답
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.print("<p>ID :"+userId+" PW :"+userPwd+"</p>");
+		
 	}	
 
 }
