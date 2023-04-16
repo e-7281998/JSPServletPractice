@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.script.ScriptContext;
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +27,11 @@ public class FirstServlet extends HttpServlet {
 		//out.println("<script type='text/javascript'>location.href='second';</script>");
 		
 		//sendRedirect로 다른 서블릿에 데이터 전달하기
-		response.sendRedirect("second?name=lee");
+		//response.sendRedirect("second?name=lee");
+		
+		//dispatcher
+		RequestDispatcher dis = request.getRequestDispatcher("second");
+		dis.forward(request, response);
 	}
 
 }

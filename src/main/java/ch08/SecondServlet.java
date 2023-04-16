@@ -23,8 +23,10 @@ public class SecondServlet extends HttpServlet {
 		//out.println("<p>refresh를 이용한redirect 연습</p>");
 		//out.println("<p>location을 이용한redirect 연습</p>");
 
-		String name = request.getParameter("name");
-		out.println("<p>sendRedirect로 보낸 데이터 받기 ) name : "+name+"</p>");
+		//String name = request.getParameter("name");
+		//out.println("<p>sendRedirect로 보낸 데이터 받기 ) name : "+name+"</p>");
+		
+		out.println("<p>dispatcher를 이용한 forward 연습</p>");
 	}
 
 }
