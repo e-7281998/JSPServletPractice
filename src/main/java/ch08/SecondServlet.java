@@ -19,7 +19,12 @@ public class SecondServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("<p>sendRedirect 연습</p>");
+		//out.println("<p>sendRedirect 연습</p>");
+		//out.println("<p>refresh를 이용한redirect 연습</p>");
+		//out.println("<p>location을 이용한redirect 연습</p>");
+
+		String name = request.getParameter("name");
+		out.println("<p>sendRedirect로 보낸 데이터 받기 ) name : "+name+"</p>");
 	}
 
 }
