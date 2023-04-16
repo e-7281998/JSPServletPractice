@@ -3,12 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function login(){
+		alert("옴");
+		var login = document.login;
+		var userid = login.userid.value;
+		var userpwd = login.userpwd.value;
+		/* 
+		console.log(userid)
+		
+		login.method = "post";
+		login.action = "login";
+		login.submit();  */
+	}
+</script>
 </head>
 <body>
 
 	<!-- <form method="post" action="/JSPServletPractice/ch06/login"> -->
 	<!-- <form method="post" action="../ch06/login"> -->
-	<form method="post" action="login">
+	<form name="login" method="post" action="login">
 		<label>
 			<span>아이디</span>
 			<input type="text" name="userid">
@@ -17,7 +31,8 @@
 			<span>비밀번호</span>
 			<input type="password" name="userpwd">
 		</label>
-		<input type="submit" value="로그인">
+		<input type="submit"  value="로그인">
+		<input type="button" onClick="login()" value="로그인">
 	</form>
 </body>
 </html>
